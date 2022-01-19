@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const app = express()
-const port = 8000;
+const port = 3000;
 const mongoose = require('mongoose');
 
 
@@ -47,7 +47,7 @@ app.post('/assignments', (req, res) => {
   }).catch((err) => res.json({error : "Can't save to mongo!"}));
 })
 
-app.listen(port || process.env.PORT, ()=> {
+app.listen(process.env.PORT || port, ()=> {
   console.log(`Example app listening at http://localhost:${port}`)
   mongoose.connect(CONNECTION_URL,{
       useNewUrlParser: true ,
