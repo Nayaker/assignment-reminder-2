@@ -47,7 +47,7 @@ app.post('/assignments', (req, res) => {
   }).catch((err) => res.json({error : "Can't save to mongo!"}));
 })
 
-app.listen(port || process.env.PORT, ()=> {
+app.listen(process.env.PORT || port, ()=> {
   console.log(`Example app listening at http://localhost:${port}`)
   mongoose.connect(CONNECTION_URL,{
       useNewUrlParser: true ,
