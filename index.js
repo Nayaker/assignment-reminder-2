@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     Assignments.find({},(err,result)=>{res.status(200).json(result.reverse())});
 })
 
-const CONNECTION_URL = 'mongodb+srv://snape:snape@cluster0.1t67b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const CONNECTION_URL = '------key here------';
 
 
 app.post('/assignments', (req, res) => {
